@@ -13,7 +13,7 @@ reduce the resolving time of the issue
 
 ## Code and Resources Used 
 **Python Version:** 3.7  
-**Packages:** Fasttext, pandas, numpy, sklearn, matplotlib, flask, pickle, tensorflow, XGB. 
+**Packages:** Fasttext, pandas, numpy, sklearn, matplotlib, flask, flask_bootstrap, pickle, tensorflow, XGB.
 **For Web Framework Requirements:**  ```pip install -r requirements.txt```   
 
 
@@ -41,3 +41,7 @@ The Bi-directional LSTM with GLove Embeddings outperformed the other approaches 
 
 ## Productionization 
 In this step, I built a flask API endpoint that was hosted on a local webserver. The comments were then passed to complete pipeline where the text wast traslated if not in english,cleaned, tokenized and parsed though the model to evaluate the result. 
+
+### Home.html
+
+<img target="_blank" src="https://github.com/kalpesh22-21/QueryTicket_Classification/blob/main/Front%20End.png" width=700>
