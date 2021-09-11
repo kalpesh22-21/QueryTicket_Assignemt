@@ -1,16 +1,12 @@
 import pickle
 from flask import Flask, render_template, request
 from flask_bootstrap import Bootstrap
-import numpy as np
-from dateutil import parser
-from google_trans_new import google_translator
 from nltk.corpus import stopwords
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 from tensorflow.keras.preprocessing.text import Tokenizer
-import spacy
 from tensorflow import keras
 from tensorflow.math import reduce_mean
-import re
+from input_format import lemmatize,translate,is_date,load_model,Formatting,load_labels
 
 nlp = spacy.load("en_core_web_sm", disable=['parser', 'ner'])
 
