@@ -36,7 +36,7 @@ def is_date(str_):
         return False
         
 def load_model():
-    model = keras.models.load_model('C:\\Users\\Kalpesh\\Great lakes\\Capstone\\model')
+    model = keras.models.load_model('model')
     return(model)
 
 def Formatting(text):
@@ -77,7 +77,7 @@ def Formatting(text):
     text = text.strip()
     return text
 def load_labels ():
-    f=open('C:\\Users\\Kalpesh\\Great lakes\\Capstone\\labels.txt','r')
+    f=open('labels.txt','r')
     lines = f.readlines()
     Labels = []
     for line in lines:
