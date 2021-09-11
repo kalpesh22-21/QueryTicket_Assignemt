@@ -32,7 +32,7 @@ def home():
     Desc = " ".join(word for word in Desc.split(' ') if word not in stopwords.words('english'))
     Desc = lemmatize(Desc)
     tk = Tokenizer()
-    with open('C:\\Users\\Kalpesh\\Great lakes\\Capstone\\tokenizer.pickle', 'rb') as handle:
+    with open('tokenizer.pickle', 'rb') as handle:
         tk = pickle.load(handle)
     X = tk.texts_to_sequences(Desc)
     X = pad_sequences(X,maxlen=maxlen,padding='post')
