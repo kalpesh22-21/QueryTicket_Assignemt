@@ -1,0 +1,157 @@
+ {
+        'Arn': 'string',
+        'DataSetId': 'string',
+        'Name': 'string',
+        'CreatedTime': datetime(2015, 1, 1),
+        'LastUpdatedTime': datetime(2015, 1, 1),
+        'PhysicalTableMap': {
+            'string': {
+                'RelationalTable': {
+                    'DataSourceArn': 'string',
+                    'Catalog': 'string',
+                    'Schema': 'string',
+                    'Name': 'string',
+                    'InputColumns': [
+                        {
+                            'Name': 'string',
+                            'Type': 'STRING'|'INTEGER'|'DECIMAL'|'DATETIME'|'BIT'|'BOOLEAN'|'JSON'
+                        },
+                    ]
+                },
+                'CustomSql': {
+                    'DataSourceArn': 'string',
+                    'Name': 'string',
+                    'SqlQuery': 'string',
+                    'Columns': [
+                        {
+                            'Name': 'string',
+                            'Type': 'STRING'|'INTEGER'|'DECIMAL'|'DATETIME'|'BIT'|'BOOLEAN'|'JSON'
+                        },
+                    ]
+                },
+                'S3Source': {
+                    'DataSourceArn': 'string',
+                    'UploadSettings': {
+                        'Format': 'CSV'|'TSV'|'CLF'|'ELF'|'XLSX'|'JSON',
+                        'StartFromRow': 123,
+                        'ContainsHeader': True|False,
+                        'TextQualifier': 'DOUBLE_QUOTE'|'SINGLE_QUOTE',
+                        'Delimiter': 'string'
+                    },
+                    'InputColumns': [
+                        {
+                            'Name': 'string',
+                            'Type': 'STRING'|'INTEGER'|'DECIMAL'|'DATETIME'|'BIT'|'BOOLEAN'|'JSON'
+                        },
+                    ]
+                }
+            }
+        },
+        'LogicalTableMap': {
+            'string': {
+                'Alias': 'string',
+                'DataTransforms': [
+                    {
+                        'ProjectOperation': {
+                            'ProjectedColumns': [
+                                'string',
+                            ]
+                        },
+                        'FilterOperation': {
+                            'ConditionExpression': 'string'
+                        },
+                        'CreateColumnsOperation': {
+                            'Columns': [
+                                {
+                                    'ColumnName': 'string',
+                                    'ColumnId': 'string',
+                                    'Expression': 'string'
+                                },
+                            ]
+                        },
+                        'RenameColumnOperation': {
+                            'ColumnName': 'string',
+                            'NewColumnName': 'string'
+                        },
+                        'CastColumnTypeOperation': {
+                            'ColumnName': 'string',
+                            'NewColumnType': 'STRING'|'INTEGER'|'DECIMAL'|'DATETIME',
+                            'Format': 'string'
+                        },
+                        'TagColumnOperation': {
+                            'ColumnName': 'string',
+                            'Tags': [
+                                {
+                                    'ColumnGeographicRole': 'COUNTRY'|'STATE'|'COUNTY'|'CITY'|'POSTCODE'|'LONGITUDE'|'LATITUDE',
+                                    'ColumnDescription': {
+                                        'Text': 'string'
+                                    }
+                                },
+                            ]
+                        }
+                    },
+                ],
+                'Source': {
+                    'JoinInstruction': {
+                        'LeftOperand': 'string',
+                        'RightOperand': 'string',
+                        'LeftJoinKeyProperties': {
+                            'UniqueKey': True|False
+                        },
+                        'RightJoinKeyProperties': {
+                            'UniqueKey': True|False
+                        },
+                        'Type': 'INNER'|'OUTER'|'LEFT'|'RIGHT',
+                        'OnClause': 'string'
+                    },
+                    'PhysicalTableId': 'string'
+                }
+            }
+        },
+        'OutputColumns': [
+            {
+                'Name': 'string',
+                'Description': 'string',
+                'Type': 'STRING'|'INTEGER'|'DECIMAL'|'DATETIME'
+            },
+        ],
+        'ImportMode': 'SPICE'|'DIRECT_QUERY',
+        'ConsumedSpiceCapacityInBytes': 123,
+        'ColumnGroups': [
+            {
+                'GeoSpatialColumnGroup': {
+                    'Name': 'string',
+                    'CountryCode': 'US',
+                    'Columns': [
+                        'string',
+                    ]
+                }
+            },
+        ],
+        'FieldFolders': {
+            'string': {
+                'description': 'string',
+                'columns': [
+                    'string',
+                ]
+            }
+        },
+        'RowLevelPermissionDataSet': {
+            'Namespace': 'string',
+            'Arn': 'string',
+            'PermissionPolicy': 'GRANT_ACCESS'|'DENY_ACCESS'
+        },
+        'ColumnLevelPermissionRules': [
+            {
+                'Principals': [
+                    'string',
+                ],
+                'ColumnNames': [
+                    'string',
+                ]
+            },
+        ]
+    },
+    'RequestId': 'string',
+    'Status': 123
+}

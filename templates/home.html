@@ -1,0 +1,36 @@
+<html>
+<head>
+<link  type="text/css" rel="stylesheet" href="{{ url_for('static', filename='stylesheets/mystyle.css') }}" />
+<link  type="text/css" rel="stylesheet" href="{{ url_for('static', filename='stylesheets/new.css') }}" />
+</head>
+<body>
+<section class="py-5 text-white">
+  <div class="container py-4">
+    <div class="row">
+      <div class="col-lg-8 mx-auto text-center">
+        <h1 class="display-4">New Support Ticket</h1>
+       </div>
+    </div>
+</section>
+<div class="container" >
+        <form method="POST", action="{{url_for('home')}}">
+		<div class="mb-3">
+			<label class="form-label">Name</label>
+			<input type="text" class="form-control" name = ' a' placeholder="Your Name">
+		</div>
+		<div class="mb-3">
+			<label class="form-label">Email address</label>
+			<input type="email" class="form-control" placeholder="name@example.com">
+		</div>
+		<div class="mb-3">
+			<label class="form-label">Short Description</label>
+			<input type="text" class="form-control" name='b' placeholder="Type your Request">
+		</div>
+		<div class="mb-3">
+			<label  class="form-label">Description</label>
+			<textarea class="form-control"  rows="3" name='c'  placeholder="Type your Request"></textarea>
+		</div>
+			<center><input class="btn btn-primary btn-lg", type="submit" , value='Predict!' ></center>
+        </form>
+</div>
+</body>
