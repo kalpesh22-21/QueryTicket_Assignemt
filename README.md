@@ -46,5 +46,5 @@ In this step, I built a flask API endpoint that was hosted on a local webserver.
 
 <img target="_blank" src="https://github.com/kalpesh22-21/QueryTicket_Classification/blob/main/Front%20End.png" width=600>
 
-# Predict.html
+### Predict.html
 <img target="_blank" src="https://github.com/kalpesh22-21/QueryTicket_Classification/blob/main/Prediction.png" width=600>
